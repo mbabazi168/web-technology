@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; 
+        }
+
+        nav {
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 255, 0.897);
+            padding-bottom: 3%;
+            text-align: center;
+            position: relative; /* Ensure nav stays on top */
+            z-index: 1; /* Ensure nav stays on top */
+        }
+
+        nav a {
+            margin-top: 12%;
+            padding: 10px 20px;
+            margin-right: 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of viewport */
+        }
+
+        .card {
+            position: relative;
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for card with blur effect */
+            text-align: center;
+        }
+
+        .background-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensure image is behind other content */
+            filter: blur(60px); /* Apply blur effect */
+        }
+
+        .login-form {
+            text-align: left; /* Align form elements to the left */
+            color: #333;
+        }
+
+        .login-form label {
+            display: inline-block;
+            width: 100px; /* Adjust width as needed */
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .login-form input {
+            padding: 10px;
+            margin-bottom: 15px;
+            width: calc(100% - 20px); /* Adjust width to accommodate padding */
+            /* box-sizing: border-box;  */
+            border-radius: 12px;/* Ensure padding and border are included in width */
+        }
+
+        .button {
+            display: block; /* Display button as block to take full width */
+            margin: 15px auto; /* Center align and add margin */
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: rgba(0, 0, 255, 0.897);
+            border: none;
+            border-radius: 15px;
+        }
+
+        .button:hover {
+            background-color: #0033cc; /* Darker shade on hover */
+        }
+
+        .button:active {
+            background-color: #002699; /* Darker shade on active */
+            transform: translateY(4px);
+        }
+
+        .card p {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .card a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">
+        <button class="loginButton">BACK TO HOME</button>
+    </a>
+
+    <img src="images/photo.jpg" alt="Background Image" class="background-image">
+    <div class="login-container">
+        <div class="card">
+            <form action="sign up.html" method="get" class="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <input type="submit" value="Log In" class="button">
+            </form>
+            <p><a href="sign up.html">Create Account</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
+
